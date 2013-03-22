@@ -14,7 +14,7 @@
 
 namespace Lovecom\Mvc;
 
-class PageController extends \Lovecom\Mvc\BaseController
+class PageController extends BaseController
 {
     
     /**
@@ -37,10 +37,12 @@ class PageController extends \Lovecom\Mvc\BaseController
         if (!empty($permissions)) {
             $user = $this->getRequest()->getSession()->getLoginUser(); 
             if($user == null || !$user->isPermitted($permissions)){
+                $this->getResponse()->set('loginParams', array(
+                    'destination' => urlencode($this->getRequest()->getServer('REQUEST_URI')),
+                ));
                 return new \Lovecom\Page\Login\View($this->getResponse()); 
             }
         }
-        
         return parent::dispatch();
     }
     

@@ -6,6 +6,8 @@
  * 
  */
 
+namespace Lovecom\Business;
+
 class BaseManager 
 {
     //put your code here

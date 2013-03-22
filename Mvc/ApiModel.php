@@ -14,7 +14,7 @@
 
 namespace Lovecom\Mvc;
 
-class ApiModel extends \Lovecom\Mvc\BaseModel
+class ApiModel extends BaseModel
 {
 
     protected function doInit()

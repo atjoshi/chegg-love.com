@@ -31,6 +31,8 @@ final class Response
     private $https = false;
     // whether the user agent is supported
     private $supportedBrowser = true;
+    // redirect code
+    private $redirectHttpResponseCode = 302; 
 
     public function get($key = null)
     {
@@ -104,9 +106,15 @@ final class Response
         return $this->redirect;
     }
 
-    public function setRedirect($redirectUrl)
+    public function setRedirect($redirectUrl, $redirectHttpResponseCode = 302)
     {
         $this->redirect = $redirectUrl;
+        $this->redirectHttpResponseCode = $redirectHttpResponseCode;
+    }
+    
+    public function getRedirectHttpResponseCode()
+    {
+        return $this->redirectHttpResponseCode;
     }
 
     public function getToken()

@@ -7,8 +7,9 @@
  */
 namespace Lovecom\Business;
 
-class UserManager  extends Lovecom\Business\BaseManager 
+class UsersManager  extends BaseManager 
 {
+    protected $user; 
     public function createUser( $user )
     {
         return true;
@@ -20,5 +21,28 @@ class UserManager  extends Lovecom\Business\BaseManager
         return array( "user_id" => "1", 
                       "first_name" => "A", 
                       "last_name" => "J" );
+    }
+    public function getUserName()
+    {
+        return 'A J';
+    }
+    /**
+     * pull user data
+     * 
+     * @param type $userId
+     */
+    public function getUser($userId)
+    {
+        $this->user = $userId;
+    }
+    /**
+     * check to see if user has page permission
+     * 
+     * @param type $permissions
+     * @return type
+     */
+    public function isPermitted($permissions)
+    {
+        return ($this->user > 0 && !empty($permissions)); 
     }
 }

@@ -19,6 +19,7 @@ class Session
     private $user;
     private $session;
     private $sessionChanged = false;
+    private $usersManagers = array(); 
 
     public static function startSession($startSessionNow = true,
             $sessionName = '', $iniSet = array())
@@ -42,10 +43,10 @@ class Session
         self::$expiration = time() + (60 * 60 * 24 * 365 * 5);
     }
 
-    public function __construct($session = array(), \Lovecom\Business\User $user = null)
+    public function __construct($session = array())
     {
         $this->session = $session;
-        $this->user = $user;
+        $this->user = null;
     }
 
     /**
@@ -55,7 +56,33 @@ class Session
      */
     public function getLoginUser()
     {
+        if($this->user == null && $this->getSessionData('userId') > 0){
+            $this->user = $this->getUsersManager($this->getSessionData('userId')); 
+        }
         return $this->user;
+    }
+    
+    protected function getUsersManager($userId)
+    {
+        if(!isset($this->usersManagers[$userId]))
+        {
+            $manager = new \Lovecom\Business\UsersManager(); 
+            $manager->getUser($userId); 
+            $this->usersManagers[$userId] = $manager; 
+        }
+        return $this->usersManagers[$userId]; 
+            
+    }
+    
+    /**
+     * for test 
+     * 
+     * @param type $userId
+     * @param type $obj
+     */
+    public function setUserManager($userId, $obj)
+    {
+        $this->usersManagers[$userId] = $obj; 
     }
 
     public function isLoggedIn()

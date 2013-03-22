@@ -126,7 +126,7 @@ class Router
      * 
      * @param \Lovecom\System\Request $request
      */
-    public function setRequest(namespace\Request $request)
+    public function setRequest(Request $request)
     {
         $this->request = $request;
     }
@@ -138,7 +138,7 @@ class Router
     public function getResponse()
     {
         if (!$this->response) {
-            $this->response = new namespace\Response();
+            $this->response = new Response();
         }
         return $this->response;
     }
@@ -149,7 +149,7 @@ class Router
      * 
      * @param \Lovecom\System\Response $response
      */
-    public function setResponse(namespace\Response $response)
+    public function setResponse(Response $response)
     {
         $this->response = $response;
     }
@@ -161,18 +161,14 @@ class Router
     public function getSession()
     {
         if (!$this->session) {
-            namespace\Session::startSession();
-            $user = null;
-            if (!empty($_SERVER['REMOTE_USER']))
-            {
-                $user = new \Lovecom\Business\User($_SERVER['REMOTE_USER']);
-            }
-            $this->session = new namespace\Session($_SESSION, $user);
+            Session::startSession();
+            
+            $this->session = new Session($_SESSION);
         }
         return $this->session;
     }
 
-    public function setSession(namespace\Session $session)
+    public function setSession(Session $session)
     {
         $this->session = $session;
     }

@@ -14,7 +14,7 @@
 
 namespace Lovecom\Mvc;
 
-class PageModel extends \Lovecom\Mvc\BaseModel
+class PageModel extends BaseModel
 {
     protected function doInit()
     {

@@ -14,7 +14,7 @@
 
 namespace Lovecom\Mvc;
 
-class ApiView extends \Lovecom\Mvc\BaseView
+class ApiView extends BaseView
 {
     private $results; 
 
