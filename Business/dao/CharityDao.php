@@ -6,7 +6,9 @@
  * @author atjoshi
  * 
  */
-class CharityDao 
+namespace Lovecom\Business\dao;
+
+class CharityDao extends BaseDao
 {
     public function create( CharityEntity $entity )
     {

@@ -7,11 +7,11 @@
  */
 namespace Lovecom\Business;
 
-class UserManager  extends Lovecom\Business\BaseManager 
+class UserManager  extends BaseManager 
 {
     public function createUser( $user )
     {
-        return true;
+        
     }
     
     public function loginUser( $loginName, $password )

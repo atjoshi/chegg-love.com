@@ -8,7 +8,7 @@
  */
 namespace Lovecom\Business;
 
-class CharityManager extends Lovecom\Business\BaseManager 
+class CharityManager extends BaseManager 
 {
     public function getAvailableCharities()
     {
