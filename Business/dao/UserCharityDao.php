@@ -9,17 +9,26 @@ namespace Lovecom\Business\dao;
 
 class UserCharityDao extends BaseDao
 { 
-    public function insert( $entity )
+    public function create( $entity )
     {
+        $userCharityId = uniqid();
+        
         $q  = $this->pdo->prepare( "INSERT INTO love.user_charity
                                         SET
                                             user_charity_id = :userCharityId,
                                             user_id = :userId,
                                             charity_id = :charityId,
-                                            is_active = :isActive,
+                                            user_loved_item_id = :userLovedItemId,
+                                            is_active = 1,
                                             modified_date = NOW(),
                                             created_date = NOW()
                                 " );
+        $q->bindValue( ':userCharityId', $userCharityId );
+        $q->bindValue( ':userId', $entity[ 'user_id' ] );
+        $q->bindValue( ':charityId', $entity[ 'charity_id' ] );
+        $q->bindValue( ':userLovedItemId', $entity[ 'user_loved_item_id' ] );
+        $q->execute();
+        
     }
     
     public function getByUserId( $userId )
