@@ -7,26 +7,26 @@
  */
 namespace Lovecom\Business\Dao;
 
-class UserLovedItemsDao  extends BaseDao
+class UserLovedPromotersDao  extends BaseDao
 {   
     public function create( $userId, $lovedUserId )
     {
-        $userLovedItemId = uniqid();
+        $userLovedPromoterId = uniqid();
         
-        $q = $this->pdo->prepare( "INSERT INTO love.user_loved_items
+        $q = $this->pdo->prepare( "INSERT INTO love.user_loved_promoters
                                         SET
-                                            user_loved_item_id = :userLovedItemId,
+                                            user_loved_promoter_id = :userLovedPromoterId,
                                             user_id = :userId,
-                                            loved_item_user_id = :lovedItemUserId,
+                                            loved_promoter_user_id = :lovedPromoterUserId,
                                             is_active = 1,
                                             created_date = NOW(),
                                             modified_date = NOW()
                                 " );
-        $q->bindValue( ':userLovedItemId', $userLovedItemId );
+        $q->bindValue( ':userLovedPromoterId', $userLovedPromoterId );
         $q->bindValue( ':userId', $userId );
-        $q->bindValue( ':lovedItemUserId', $lovedUserId );
+        $q->bindValue( ':lovedPromoterUserId', $lovedUserId );
         $q->execute();
         
-        return $userLovedItemId;
+        return $userLovedPromoterId;
     }
 }

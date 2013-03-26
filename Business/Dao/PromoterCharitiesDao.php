@@ -7,7 +7,7 @@
  */
 namespace Lovecom\Business\Dao;
 
-class CelebrityCharitiesDao extends BaseDao
+class PromoterCharitiesDao extends BaseDao
 {
     public function create( $entities )            
     {
