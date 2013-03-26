@@ -21,7 +21,7 @@ class UserManager  extends BaseManager
     public function loginUser( $loginName, $password )
     {
         $pdo = Database::getInstance( 'love_com' );
-        $usersDao =  new UsersDao( $pdo );
+        $usersDao =  new Dao\UsersDao( $pdo );
         $user = $usersDao->getByLoginEmail( $loginName );
         
         if( !empty( $user ) )
@@ -35,17 +35,17 @@ class UserManager  extends BaseManager
         throw new Exception( "Invalid Login/Password", 2 );
     }
     
-    public function saveUserLovedItem( $userId, $lovedUserId )
+    public function saveUserLovedPromoter( $userId, $promoterUserId )
     {
         $pdo = Database::getInstance( 'love_com' );
-        $userLovedItemsDao = new UserLovedItemsDao( $pdo );
-        $userLovedItemsDao->create( $userId, $lovedUserId );
+        $userLovedPromoterDao = new Dao\UserLovedPromoterDao( $pdo );
+        $userLovedPromoterDao->create( $userId, $promoterUserId );
     }
     
     public function saveUserCharity( $userId, $loveUserId, $charityId )
     {
         $pdo = Database::getInstance( 'love_com' );
-        $userCharityDao = new UserCharityDao( $pdo );
+        $userCharityDao = new Dao\UserCharityDao( $pdo );
         $items = array(
                         "user_id" => $userId,
                         "charity_id" => $charityId,
