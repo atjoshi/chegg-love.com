@@ -29,4 +29,21 @@ class UserLovedPromotersDao  extends Dao\BaseDao
         
         return $userLovedPromoterId;
     }
+    
+    public function getByUserIdPromoterUserId( $userId, $promoterUserId )
+    {
+        $q = $this->pdo->prepare( "SELECT * FROM love.user_loved_promoters
+                                    WHERE
+                                        user_id = :userId
+                                    AND
+                                        loved_promoter_user_id = :lovedPromoterUserId
+                                    AND
+                                        is_active = 1
+                                " );
+        $q->bindValue( ':userId', $userId );
+        $q->bindValue( ':lovedPromoterUserId', $promoterUserId );
+        $q->execute();
+        
+        return $q->fetch( PDO::FETCH_ASSOC );
+    }
 }
