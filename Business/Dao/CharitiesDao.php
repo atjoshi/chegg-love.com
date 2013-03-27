@@ -14,5 +14,14 @@ namespace Lovecom\Business;
 
 class CharitiesDao extends Dao\BaseDao
 {
-    //put your code here
+    public function getByCharityId( $charityId )
+    {
+        $q = $this->pdo->prepare( "SELECT * FROM love.charities
+                                    WHERE
+                                        charity_id = :charityId
+                                " );
+        $q->bindValue( ':charityId', $charityId );
+        $q->execute();
+        return $q->fetch( PDO::FETCH_ASSOC );
+    }
 }
