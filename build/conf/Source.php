@@ -28,11 +28,26 @@ StaticConfig::$pages = array(
         'js' => array(
         ),
     ),
+    'Lovecom\Page\Login\PopupView' => array(
+        'css' => array(
+            '/s/login/login.css',
+        ),
+        'js' => array(
+        ),
+    ),
     'Lovecom\Page\Myaccount\View' => array(
         'css' => array(
             '/s/myaccount/myaccount.css',
         ),
         'js' => array(
+        ),
+    ),
+    'Lovecom\Page\Lovebutton\View' => array(
+        'css' => array(
+            '/s/lovebutton/love.css',
+        ),
+        'js' => array(
+            '/s/lovebutton/love.js',
         ),
     ),
 );

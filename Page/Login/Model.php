@@ -29,7 +29,8 @@ class Model extends \Lovecom\Mvc\PageModel
             {
                 $this->getRequest()->getSession()->setSessionData('userId', $userObj['user_id']); 
                 $destination = $this->getRequest()->getGet('destination'); 
-                if(empty($destination))
+                $lovebutton = $this->getRequest()->getGet('lovebutton'); 
+                if(!empty($destination))
                 {
                     $destination = urldecode($destination); 
                 }
@@ -38,11 +39,20 @@ class Model extends \Lovecom\Mvc\PageModel
                     $destination = '/'; 
                 }
                 $this->getResponse()->setRedirect($destination); 
+                if($lovebutton == 1)
+                {
+                    $this->confirmLoveButton();
+                }
                 return;
             }
         }
         $params = $this->getRequest()->getGet(); 
         $this->getResponse()->set('loginParams', $params);
+    }
+    protected function confirmLoveButton()
+    {
+        $this->getResponse()->setRedirect(null); 
+        $this->getResponse()->set('success', 1);
     }
     protected function getUsersManager()
     {
