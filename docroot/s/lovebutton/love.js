@@ -13,9 +13,10 @@ CC('Page.Lovebutton', C.Page.Base.extend({
                 error:function(){
                     var popup = window.open('/login?lovebutton=1&id='+$el.data('loveid'),
                         'popUpWindow','height=300,width=500,left=10,top=10,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no,status=no');
-                    $(popup).bind('loginsuccess', function() {
-                            alert('here');
-                    });
+                    window.loginsuccess = function() {
+                        $('[data-action=loved]').show(); 
+                        $el.hide(); 
+                    };
                 }
             }); 
         });

@@ -30,9 +30,9 @@ class PopupView extends View
         {
             $script = <<<SCRIPT
 <script>
-    $(window).trigger('loginsuccess');
-    window
-<script>
+    window.opener.loginsuccess()
+    window.close();
+</script>
 SCRIPT;
         }
         

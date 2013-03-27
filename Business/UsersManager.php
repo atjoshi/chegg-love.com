@@ -8,7 +8,7 @@
 namespace Lovecom\Business;
 
 
-class UserManager  extends BaseManager 
+class UsersManager  extends BaseManager 
 {
     protected $user; 
     public function createUser( $user )
@@ -22,6 +22,7 @@ class UserManager  extends BaseManager
     
     public function loginUser( $loginName, $password )
     {
+        return array('user_id'=>1);
         $pdo = Database::getInstance( 'love_com' );
         $usersDao =  new Dao\UsersDao( $pdo );
         $user = $usersDao->getByLoginEmail( $loginName );

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Description of Controller
+ * Description of Model
  *
  * @author      ben <ben@chegg.com>
  * @copyright   2013 Chegg INC
@@ -14,10 +14,12 @@
 
 namespace Lovecom\Api\Lovesubmit;
 
-class Controller extends \Lovecom\Mvc\ApiController
+class Model extends \Lovecom\Mvc\ApiModel
 {
-    protected function doController()
+
+    public function submitLove()
     {
-        $this->post('/lovesubmit', '\Lovecom\Api\Lovesubmit\Model', 'submitLove', array('user.normal')); 
+        
     }
+
 }

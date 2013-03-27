@@ -24,7 +24,7 @@ class Database
 
     public static function instantiate( $dbKey )
     {
-        $dbConfig = Config::$db[ $dbKey ];
+        //$dbConfig = Config::$db[ $dbKey ];
         return new PDO( "mysql:host=". $dbConfig[ 'host_name' ]. ";port=". $dbConfig[ 'connection_port' ]
                         ."dbname=". $dbConfig[ 'db_name' ],
                         $dbConfig[ 'user_name' ],
