@@ -19,7 +19,7 @@ class CharitiesDao extends Dao\BaseDao
         $entity[ 'charityId' ] = uniqid();
         
         $q = $this->pdo->prepare( 
-                                    "INSERT INTO love.charities
+                                    "INSERT INTO love_com.charities
                                             SET
                                                 charity_id = :charityId,
                                                 charity_name = :charityName,
@@ -36,7 +36,7 @@ class CharitiesDao extends Dao\BaseDao
     
     public function getByCharityId( $charityId )
     {
-        $q = $this->pdo->prepare( "SELECT * FROM love.charities
+        $q = $this->pdo->prepare( "SELECT * FROM love_com.charities
                                     WHERE
                                         charity_id = :charityId
                                 " );
@@ -44,4 +44,13 @@ class CharitiesDao extends Dao\BaseDao
         $q->execute();
         return $q->fetch( PDO::FETCH_ASSOC );
     }
+
+    public function getCharities()
+    {
+        $q = $this->pdo->prepare( "SELECT * FROM love_com.charities" );
+        $q->execute();
+        
+        return $q->fetchAll();
+    }
+
 }
