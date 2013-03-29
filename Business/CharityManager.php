@@ -18,5 +18,15 @@ class CharityManager extends BaseManager
         
         return $charities;
     }
+
+    public function getAvailableCharities()
+    {
+        $pdo = Database::getInstance( 'love_com' );
+        $charitiesDao = new Dao\CharitiesDao( $pdo );
+        $charities = $charitiesDao->getCharities();
+        
+        return $charities;
+        
+    }
    
 }
