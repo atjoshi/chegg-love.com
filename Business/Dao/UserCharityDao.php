@@ -13,7 +13,7 @@ class UserCharityDao extends BaseDao
     {
         $userCharityId = uniqid();
         
-        $q  = $this->pdo->prepare( "INSERT INTO love.user_charity
+        $q  = $this->pdo->prepare( "INSERT INTO love_com.user_charity
                                         SET
                                             user_charity_id = :userCharityId,
                                             user_id = :userId,
@@ -34,7 +34,7 @@ class UserCharityDao extends BaseDao
     public function getByUserId( $userId )
     {
         $userCharities = array();
-        $q = $this->pdo->prepare( "SELECT * FROM love.user_charity
+        $q = $this->pdo->prepare( "SELECT * FROM love_com.user_charity
                                         WHERE
                                             user_id = :userId
                                         AND
@@ -54,7 +54,7 @@ class UserCharityDao extends BaseDao
     public function getByCharityId( $charityId )
     {
         $userCharities = array();
-        $q = $this->pdo->prepare( "SELECT * FROM love.user_charity
+        $q = $this->pdo->prepare( "SELECT * FROM love_com.user_charity
                                         WHERE
                                             charity_id = :charityId
                                         AND

@@ -13,7 +13,7 @@ class UserLovedPromotersDao  extends Dao\BaseDao
     {
         $userLovedPromoterId = uniqid();
         
-        $q = $this->pdo->prepare( "INSERT INTO love.user_loved_promoters
+        $q = $this->pdo->prepare( "INSERT INTO love_com.user_loved_promoters
                                         SET
                                             user_loved_promoter_id = :userLovedPromoterId,
                                             user_id = :userId,
@@ -32,7 +32,7 @@ class UserLovedPromotersDao  extends Dao\BaseDao
     
     public function getByUserIdPromoterUserId( $userId, $promoterUserId )
     {
-        $q = $this->pdo->prepare( "SELECT * FROM love.user_loved_promoters
+        $q = $this->pdo->prepare( "SELECT * FROM love_com.user_loved_promoters
                                     WHERE
                                         user_id = :userId
                                     AND
