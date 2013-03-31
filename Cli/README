@@ -1,0 +1,3 @@
+e.g. 
+
+php Cli/Run.php --class=\\Lovecom\\Cli\\Sample --userBegin=1
