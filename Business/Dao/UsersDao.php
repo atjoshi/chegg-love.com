@@ -6,9 +6,9 @@
  * @author atjoshi
  * 
  */
-namespace Lovecom\Business\dao;
+namespace Lovecom\Business;
 
-class UsersDao extends BaseDao
+class UsersDao extends Dao\BaseDao
 {
     public function create( $user )
     {

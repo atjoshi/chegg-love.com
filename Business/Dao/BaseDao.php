@@ -1,15 +1,11 @@
 <?php
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  * Description of BaseDao
  *
  * @author atjoshi
  */
+namespace Lovecom\Business;
+
 class BaseDao 
 {
     protected $pdo = null;

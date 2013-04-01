@@ -7,14 +7,15 @@
  */
 namespace Lovecom\Business;
 
-
 class UsersManager  extends BaseManager 
 {
     protected $user; 
     public function createUser( $user )
     {
         $pdo = Database::getInstance( 'love_com' );
-        $usersDao =  new UsersDao( $pdo );
+        $usersDao =  new \Lovecom\Business\Dao\UsersDao( $pdo );
+
+	var_dump( $usersDao, $user );exit;
         $userId = $usersDao->create( $user );
         
         return $userId;
