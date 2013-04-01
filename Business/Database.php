@@ -24,10 +24,11 @@ class Database
 
     public static function instantiate( $dbKey )
     {
-        //$dbConfig = Config::$db[ $dbKey ];
-        return new PDO( "mysql:host=". $dbConfig[ 'host_name' ]. ";port=". $dbConfig[ 'connection_port' ]
-                        ."dbname=". $dbConfig[ 'db_name' ],
-                        $dbConfig[ 'user_name' ],
+	$items = \Lovecom\Mvc\MvcHelper::getResourceDatabase();
+        $dbConfig = $items[ 'master_read' ];
+        return new \PDO( "mysql:host=". $dbConfig[ 'hostname' ]. ";port=". $dbConfig[ 'connectionport' ]
+                        ."dbname=". $dbConfig[ 'db' ],
+                        $dbConfig[ 'username' ],
                         $dbConfig[ 'password' ] );
     }
 }
