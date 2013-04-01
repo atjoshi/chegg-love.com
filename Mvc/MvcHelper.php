@@ -9,6 +9,7 @@ class MvcHelper
      * @var array 
      */
     private static $resourceMap; 
+    private static $resourceDatabase; 
 
     /**
      * getBaseClassName
@@ -77,6 +78,15 @@ class MvcHelper
     public static function getResourceMap()
     {
         return self::$resourceMap;
+    }
+    public static function setResourceDatabase($resourceDatabase)
+    {
+        self::$resourceDatabase = $resourceDatabase;
+    }
+
+    public static function getResourceDatabase()
+    {
+        return self::$resourceDatabase;
     }
 
 }

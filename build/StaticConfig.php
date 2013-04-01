@@ -14,6 +14,7 @@ class StaticConfig
 {
     // page resource map
 	public static $pages;
+	public static $databases;
 	private static $type;
 
 	public static function getResourceMap()
@@ -22,6 +23,12 @@ class StaticConfig
 		self::$type = 'source';
         require $dir .'conf/Source.php';
         return self::$pages; 
+	}
+	public static function getResourceDatabase()
+	{
+        $dir = __DIR__.'//'; 
+        require $dir .'conf/Database.php';
+        return self::$databases; 
 	}
     
 	public static function getUniqueResources()

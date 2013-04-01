@@ -17,6 +17,7 @@ require $tmpPath . 'System/Autoloader.php';
 
 System\Autoloader::registerAutoloader(); 
 \Lovecom\Mvc\MvcHelper::setResourceMap(StaticConfig::getResourceMap()); 
+\Lovecom\Mvc\MvcHelper::setResourceDatabase(StaticConfig::getResourceDatabase()); 
 
 
 $rounter = new System\Router(); 
