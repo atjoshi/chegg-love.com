@@ -22,11 +22,9 @@ class UsersManager  extends BaseManager
     
     public function loginUser( $loginName, $password )
     {
-        //return array('user_id'=>1);
         $pdo = Database::getInstance( 'master_read' );
         $usersDao =  new \Lovecom\Business\Dao\UsersDao( $pdo );
         $user = $usersDao->getByLoginEmail( $loginName );
-       	var_dump( $user );exit; 
         if( !empty( $user ) )
         {
             if( $user[ 'password' ] == md5( $password ) )
@@ -35,7 +33,7 @@ class UsersManager  extends BaseManager
             }
         }
         
-        throw new Exception( "Invalid Login/Password", 2 );
+        throw new \Exception( "Invalid Login/Password", 2 );
     }
     
     public function saveUserLovedPromoter( $userId, $promoterUserId )

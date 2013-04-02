@@ -41,6 +41,6 @@ class UsersDao extends BaseDao
         $q->bindValue( ':loginEmail', $loginEmail );
         $q->execute();
         
-        return $q->fetch( PDO::FETCH_ASSOC  ); 
+        return $q->fetch( \PDO::FETCH_ASSOC  ); 
     }
 }

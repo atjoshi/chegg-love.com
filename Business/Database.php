@@ -26,6 +26,7 @@ class Database
     {
 	$items = \Lovecom\Mvc\MvcHelper::getResourceDatabase();
         $dbConfig = $items[ $dbKey ];
+
         return new \PDO( "mysql:host=". $dbConfig[ 'hostname' ]. ";port=". $dbConfig[ 'connectionport' ]
                         ."dbname=". $dbConfig[ 'db' ],
                         $dbConfig[ 'username' ],
