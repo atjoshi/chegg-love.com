@@ -14,8 +14,7 @@ class UsersManager  extends BaseManager
     {
         $pdo = Database::getInstance( 'master_read' );
         $usersDao =  new \Lovecom\Business\Dao\UsersDao( $pdo );
-
-	var_dump( $usersDao, $user );exit;
+	$user[ 'password' ] = md5( $user[ 'password' ] );
         $userId = $usersDao->create( $user );
         
         return $userId;
@@ -23,11 +22,11 @@ class UsersManager  extends BaseManager
     
     public function loginUser( $loginName, $password )
     {
-        return array('user_id'=>1);
+        //return array('user_id'=>1);
         $pdo = Database::getInstance( 'master_read' );
-        $usersDao =  new Dao\UsersDao( $pdo );
+        $usersDao =  new \Lovecom\Business\Dao\UsersDao( $pdo );
         $user = $usersDao->getByLoginEmail( $loginName );
-        
+       	var_dump( $user );exit; 
         if( !empty( $user ) )
         {
             if( $user[ 'password' ] == md5( $password ) )
