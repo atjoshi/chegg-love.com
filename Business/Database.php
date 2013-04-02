@@ -25,7 +25,7 @@ class Database
     public static function instantiate( $dbKey )
     {
 	$items = \Lovecom\Mvc\MvcHelper::getResourceDatabase();
-        $dbConfig = $items[ 'master_read' ];
+        $dbConfig = $items[ $dbKey ];
         return new \PDO( "mysql:host=". $dbConfig[ 'hostname' ]. ";port=". $dbConfig[ 'connectionport' ]
                         ."dbname=". $dbConfig[ 'db' ],
                         $dbConfig[ 'username' ],
