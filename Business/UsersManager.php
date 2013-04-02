@@ -12,7 +12,7 @@ class UsersManager  extends BaseManager
     protected $user; 
     public function createUser( $user )
     {
-        $pdo = Database::getInstance( 'love_com' );
+        $pdo = Database::getInstance( 'master_read' );
         $usersDao =  new \Lovecom\Business\Dao\UsersDao( $pdo );
 
 	var_dump( $usersDao, $user );exit;
@@ -24,7 +24,7 @@ class UsersManager  extends BaseManager
     public function loginUser( $loginName, $password )
     {
         return array('user_id'=>1);
-        $pdo = Database::getInstance( 'love_com' );
+        $pdo = Database::getInstance( 'master_read' );
         $usersDao =  new Dao\UsersDao( $pdo );
         $user = $usersDao->getByLoginEmail( $loginName );
         
@@ -41,14 +41,14 @@ class UsersManager  extends BaseManager
     
     public function saveUserLovedPromoter( $userId, $promoterUserId )
     {
-        $pdo = Database::getInstance( 'love_com' );
+        $pdo = Database::getInstance( 'master_read' );
         $userLovedPromoterDao = new Dao\UserLovedPromoterDao( $pdo );
         $userLovedPromoterDao->create( $userId, $promoterUserId );
     }
     
     public function saveUserCharity( $userId, $loveUserId, $charityId )
     {
-        $pdo = Database::getInstance( 'love_com' );
+        $pdo = Database::getInstance( 'master_read' );
         $userCharityDao = new Dao\UserCharityDao( $pdo );
         $items = array(
                         "user_id" => $userId,

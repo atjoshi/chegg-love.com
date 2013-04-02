@@ -12,7 +12,7 @@ class CharityManager extends BaseManager
 {
     public function getAvailableCharities( $promoterUserId )
     {
-        $pdo = Database::getInstance( 'love_com' );
+        $pdo = Database::getInstance( 'master_read' );
         $promoterCharitiesDao = new Dao\PromoterCharitiesDao( $pdo );
         $charities = $promoterCharitiesDao->getByPromoterUserId( $promoterUserId );
         
@@ -21,12 +21,11 @@ class CharityManager extends BaseManager
 
     public function getAvailableCharities()
     {
-        $pdo = Database::getInstance( 'love_com' );
+        $pdo = Database::getInstance( 'master_read' );
         $charitiesDao = new Dao\CharitiesDao( $pdo );
         $charities = $charitiesDao->getCharities();
         
         return $charities;
         
     }
-   
 }
