@@ -9,11 +9,11 @@ class Config
 {
     public static $db = array(
                                 'love_com' => array(
-                                                     'host_name'=> '127.0.0.1',
-                                                     'connection_port' => '3307',
-                                                     'db_name' => 'love',
-                                                     'user_name' => 'root',
-                                                     'password' => ''
+                                                     'host_name'=> 'live-dbpm.dev1.cloud.cheggnet.com',
+                                                     'connection_port' => '3306',
+                                                     'db_name' => 'love_com',
+                                                     'user_name' => 'tbflix',
+                                                     'password' => 'c4tny2003'
                                                 )
                             );
 
