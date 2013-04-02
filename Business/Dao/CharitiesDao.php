@@ -10,9 +10,9 @@
  *
  * @author atjoshi
  */
-namespace Lovecom\Business;
+namespace Lovecom\Business\Dao;
 
-class CharitiesDao extends Dao\BaseDao
+class CharitiesDao extends BaseDao
 {
     public function create( $entity )
     {

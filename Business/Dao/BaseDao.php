@@ -4,7 +4,7 @@
  *
  * @author atjoshi
  */
-namespace Lovecom\Business;
+namespace Lovecom\Business\Dao;
 
 class BaseDao 
 {

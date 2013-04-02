@@ -5,9 +5,9 @@
  * @author atjoshi
  * 
  */
-namespace Lovecom\Business;
+namespace Lovecom\Business\Dao;
 
-class UserLovedPromotersDao  extends Dao\BaseDao
+class UserLovedPromotersDao  extends BaseDao
 {   
     public function create( $userId, $lovedUserId )
     {

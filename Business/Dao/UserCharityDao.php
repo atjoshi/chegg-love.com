@@ -5,7 +5,7 @@
  * @author atjoshi
  * 
  */
-namespace Lovecom\Business\dao;
+namespace Lovecom\Business\Dao;
 
 class UserCharityDao extends BaseDao
 { 
