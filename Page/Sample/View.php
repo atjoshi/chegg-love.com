@@ -395,39 +395,32 @@ cheggPixel.src = 'http://www.chegg.com/_ajax/cheggpixel?js=1';
 	<img src="http://www.chegg.com/_ajax/cheggpixel?ns=1" />
 </noscript>
 <script type="text/javascript">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:")+"//"+"d1ros97qkrwjf5.cloudfront.net/42/eum/rum.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-1.newrelic.com","0788ceb48b","677809","blRWMEYCWBJUAUALDVcedxFHF1kMGgFcBwVeV1sWUwxZBR8=",0,1060,new Date().getTime(),"","","","",""]);</script>
-<script>
-            $(document).ready(function(){
-                var love = $('#love');
-                var loved = $('#loved'); 
-                if(C.utility.getCookie('loved') == 1){
-                    love.hide(); 
-                    loved.show(); 
-                }
-                else{
-                    love.show(); 
-                    loved.hide(); 
-                }
-                var html = '<div class="dialog-4">'+
-                    '<div class="dialog-hdr"><h2 class="dialog-title">Title</h2>'+
-                        '<div class="dialog-close-wrapper"><button class="btn-secondary-sm chg-dialog-close"><span class="icn-cross">Close</span></button></div>'+
-                    '</div>'+
-                    '<div class="dialog-content"><section>message</section></div>'+
-                    '</div>';
-                loved.click(function(e){
-                    e.preventDefault(); 
-                    new C.widget.dialog({content:html}); 
-                }); 
-                love.click(function(e){
-                    e.preventDefault(); 
-                    love.hide(); 
-                    loved.show();
-                    document.cookie='loved=1';
-                    new C.widget.dialog({content:html});
-                });
-   
-            });
-        
-        </script>
+<style>
+.lovebutton{
+    background: #dd6060 url(/s/sample/img/love1.png) no-repeat -9px -7px;
+    height: 70px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 190px;
+    border: 2px solid #cd4539;
+    border-bottom: 5px solid #cd4539;
+    border-right: 3px solid #cd4539;
+}
+.lovebutton2{
+    background: #c7da5d url(/s/sample/img/love2.png) no-repeat -8px -2px;
+    height: 70px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 190px;
+    border: 2px solid #a9bc39;
+    border-bottom: 5px solid #a9bc39;
+    border-right: 3px solid #a9bc39;
+}
+.buttondiv{
+    text-align: right;
+}
+</style>
+<script src="/s/sample/sample.js"></script>
 </body>
 </html>
 HTML;
