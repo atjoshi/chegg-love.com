@@ -10,7 +10,7 @@ namespace Lovecom\Business;
 
 class CharityManager extends BaseManager 
 {
-    public function getAvailableCharities( $promoterUserId )
+    public function getAvailableCharitiesByPromoterUserId( $promoterUserId )
     {
         $pdo = Database::getInstance( 'master_read' );
         $promoterCharitiesDao = new Dao\PromoterCharitiesDao( $pdo );

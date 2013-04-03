@@ -17,17 +17,20 @@ class UserCharityDao extends BaseDao
                                         SET
                                             user_charity_id = :userCharityId,
                                             user_id = :userId,
-                                            charity_id = :charityId,
-                                            user_loved_item_id = :userLovedItemId,
+                                            promoter_charity_id = :promoterCharityId,
+                                            user_loved_promoter_id = :userLovedPromoterId,
                                             is_active = 1,
                                             modified_date = NOW(),
                                             created_date = NOW()
                                 " );
         $q->bindValue( ':userCharityId', $userCharityId );
         $q->bindValue( ':userId', $entity[ 'user_id' ] );
-        $q->bindValue( ':charityId', $entity[ 'charity_id' ] );
-        $q->bindValue( ':userLovedItemId', $entity[ 'user_loved_item_id' ] );
+        $q->bindValue( ':promoterCharityId', $entity[ 'promoter_charity_id' ] );
+        $q->bindValue( ':userLovedPromoterId', $entity[ 'user_loved_promoter_id' ] );
         $q->execute();
+	var_dump( $q->errorInfo() );exit;
+
+	return $userCharityId;
         
     }
     
