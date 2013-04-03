@@ -183,24 +183,24 @@ HTML;
         $header = $this->getBodyHeader(); 
         return <<<HTML
 
-
+<div class="love-content">
 {$header}
 <article>
     {$content}
 </article>
 
 <footer class="footer">
-  <div class="container">
+  <div class="footer-container">
     <p>&copy; Love.com 2013</p>
   </div>
 </footer>
-
+</div>
 HTML;
     }
     
     protected function getBodyHeader()
     {
-        $title = $this->getTitle(); 
+        
         return <<<HTML
 <!-- NAVBAR ================================================== -->
 <header class="navbar-wrapper">
@@ -215,29 +215,13 @@ HTML;
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="brand" href="/">{$title}</a>
+        <a class="brand" href="/"><img src="/s/_global/img/logo.png" style="width:100px;" /></a>
         <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
         <div class="nav-collapse collapse">
-          <p class="navbar-text pull-right">
-            <a href="/myaccount" class="navbar-link">My Account</a>
-          </p>
           <ul class="nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
-            <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="nav-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div><!-- /.navbar-inner -->

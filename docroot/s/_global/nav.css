@@ -1,0 +1,85 @@
+body{
+    background: url(/s/_global/img/b.png);
+}
+.navbar-inverse .navbar-inner {
+  background-color: #eaedf1;
+  background-image: -moz-linear-gradient(top, #eaedf1, #eaedf1);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eaedf1), to(#eaedf1));
+  background-image: -webkit-linear-gradient(top, #eaedf1, #eaedf1);
+  background-image: -o-linear-gradient(top, #eaedf1, #eaedf1);
+  background-image: linear-gradient(to bottom, #eaedf1, #eaedf1);
+  background-repeat: repeat-x;
+  border-color: #eaedf1;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eaedf1', endColorstr='#eaedf1', GradientType=0);
+}
+.navbar-inverse .brand, .navbar-inverse .nav > li > a{
+     font-weight: bolder;
+     color:#f05c58;
+     text-shadow: none;
+}
+.navbar-inverse .nav > li > a:hover{
+    color:#f05c58;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus{
+    color: #fff;
+    background-color: #f05c58;
+    font-weight: bolder;    
+}
+.love-content{
+    width: 100%;
+    margin:auto;
+}
+@media (min-width: 1200px) {
+    .love-content{
+        width: 1200px;
+        margin:auto;
+    }
+}
+.desc-container{
+    background: #eaedf1;
+    margin-top:-60px;
+}
+.desc-img{
+    width: 1000%;
+}
+.footer-container{
+    padding:0px 10px;
+    background: #eaedf1;
+}
+.desc-item{
+    position: relative;
+}
+.top-link{
+    position: absolute;
+    bottom: 5px;
+    right:30px;
+}
+div.carousel-caption{
+    margin-top: 350px;
+    margin-left: 444px;
+}
+.lbtn-friends{
+    display: inline-block;
+    background: url(/s/index/images/buttons.png) no-repeat -32px -17px;
+    width: 233px;
+    height: 58px;
+}
+.lbtn-water{
+    display: inline-block;
+    background: url(/s/index/images/buttons.png) no-repeat -302px -17px;
+    width: 233px;
+    height: 58px;
+}
+.lbtn-education{
+    display: inline-block;
+    background: url(/s/index/images/buttons.png) no-repeat -32px -93px;
+    width: 233px;
+    height: 58px;
+}
+.lbtn-nature{
+    display: inline-block;
+    background: url(/s/index/images/buttons.png) no-repeat -302px -93px;
+    width: 233px;
+    height: 58px;
+}

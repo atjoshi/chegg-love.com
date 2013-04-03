@@ -27,32 +27,26 @@ class View extends \Lovecom\Mvc\PageView
 <div id="myCarousel" class="carousel slide">
   <div class="carousel-inner">
     <div class="item active">
-      <img src="/s/index/images/slide-01.jpg" alt="">
+      <img src="/s/index/images/s1.png" alt="">
       <div class="container">
         <div class="carousel-caption">
-          <h1>Example headline.</h1>
-          <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+            <a href="#s1" class="lbtn-friends"></a>
         </div>
       </div>
     </div>
     <div class="item">
-      <img src="/s/index/images/slide-02.jpg" alt="">
+      <img src="/s/index/images/s2.png" alt="">
       <div class="container">
         <div class="carousel-caption">
-          <h1>Another example headline.</h1>
-          <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          <a class="btn btn-large btn-primary" href="#">Learn more</a>
+          <a href="#s2" class="lbtn-education"></a>
         </div>
       </div>
     </div>
     <div class="item">
-      <img src="/s/index/images/slide-03.jpg" alt="">
+      <img src="/s/index/images/s3.png" alt="">
       <div class="container">
         <div class="carousel-caption">
-          <h1>One more for good measure.</h1>
-          <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+          <a href="#s3" class="lbtn-water"></a>
         </div>
       </div>
     </div>
@@ -60,6 +54,32 @@ class View extends \Lovecom\Mvc\PageView
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
   <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div><!-- /.carousel -->
+<div class="desc-container">
+    <div class="desc-item">
+        <img id="s1" class="desc-img" src="/s/index/images/b1.png"/>
+        <a href="#" class="top-link">Back Top</a>
+    </div>
+    <hr class="featurette-divider" />
+    <div class="desc-item">
+        <img class="desc-img" src="/s/index/images/b2.png"/>
+        <a href="#" class="top-link">Back Top</a>
+    </div>
+    <hr class="featurette-divider" />
+    <div class="desc-item">
+        <img id="s2" class="desc-img" src="/s/index/images/b3.png"/>
+        <a href="#" class="top-link">Back Top</a>
+    </div>
+    <hr class="featurette-divider" />
+    <div class="desc-item">
+        <img id="s3" class="desc-img" src="/s/index/images/b4.png"/>
+        <a href="#" class="top-link">Back Top</a>
+    </div>
+    <hr class="featurette-divider" />
+    <div class="desc-item">
+        <img class="desc-img" src="/s/index/images/b5.png"/>
+        <a href="#" class="top-link">Back Top</a>
+    </div>
+</div>
 HTML;
     }
 }

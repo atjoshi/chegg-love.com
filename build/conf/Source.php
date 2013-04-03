@@ -5,6 +5,7 @@ StaticConfig::$pages = array(
         'css' => array(
             '/s/_lib/bootstrap/css/bootstrap.css',
             '/s/_lib/bootstrap/css/bootstrap-responsive.css',
+            '/s/_global/nav.css',
         ),
         'js' => array(
             '/s/_lib/jquery/jquery.js',
