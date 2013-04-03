@@ -39,18 +39,18 @@ class UsersManager  extends BaseManager
     public function saveUserLovedPromoter( $userId, $promoterUserId )
     {
         $pdo = Database::getInstance( 'master_read' );
-        $userLovedPromoterDao = new Dao\UserLovedPromoterDao( $pdo );
+        $userLovedPromoterDao = new \Lovecom\Business\Dao\UserLovedPromoterDao( $pdo );
         $userLovedPromoterDao->create( $userId, $promoterUserId );
     }
     
-    public function saveUserCharity( $userId, $loveUserId, $charityId )
+    public function saveUserCharity( $userId, $promoterCharityId, $userLovedPromoterId )
     {
         $pdo = Database::getInstance( 'master_read' );
-        $userCharityDao = new Dao\UserCharityDao( $pdo );
+        $userCharityDao = new \Lovecom\Business\Dao\UserCharityDao( $pdo );
         $items = array(
                         "user_id" => $userId,
-                        "charity_id" => $charityId,
-                        "user_loved_item_id" => $lovedUserId 
+                        "promoter_charity_id" => $promoterCharityId,
+                        "user_loved_promoter_id" => $userLovedPromoterId
                     );
         $userCharityDao->create( $items );
     }
