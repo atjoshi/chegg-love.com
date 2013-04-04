@@ -397,7 +397,7 @@ cheggPixel.src = 'http://www.chegg.com/_ajax/cheggpixel?js=1';
 <script type="text/javascript">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:")+"//"+"d1ros97qkrwjf5.cloudfront.net/42/eum/rum.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-1.newrelic.com","0788ceb48b","677809","blRWMEYCWBJUAUALDVcedxFHF1kMGgFcBwVeV1sWUwxZBR8=",0,1060,new Date().getTime(),"","","","",""]);</script>
 <style>
 .lovebutton{
-    background: #dd6060 url(/s/sample/img/love1.png) no-repeat -9px -7px;
+    background: #ff5d61 url(/s/sample/img/love1.png) no-repeat -9px -7px;
     height: 70px;
     border-radius: 10px;
     display: inline-block;

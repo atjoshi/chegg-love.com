@@ -13,7 +13,7 @@
         }
         
         var html = '<div class="dialog-4">'+
-            '<div class="dialog-hdr"><h2 class="dialog-title">Are you considering to love more?</h2>'+
+            '<div class="dialog-hdr"><h2 class="dialog-title">Other charity you might love.</h2>'+
                 '<div class="dialog-close-wrapper"><button class="btn-secondary-sm chg-dialog-close"><span class="icn-cross">Close</span></button></div>'+
             '</div>'+
             '<div class="dialog-content"><section>'+
@@ -50,6 +50,16 @@
             '</div>'+
             '</section></div>'+
             '</div>';
+        var html2 = '<div class="dialog-4">'+
+            '<div class="dialog-hdr"><h2 class="dialog-title">Love Shop</h2>'+
+                '<div class="dialog-close-wrapper"><button class="btn-secondary-sm chg-dialog-close"><span class="icn-cross">Close</span></button></div>'+
+            '</div>'+
+            '<div class="dialog-content"><section>'+
+            '<br/><p class="txt-2-bold" style="font-size:18px;">Love Shop is the place on Love Button where the registered user can spend his clicks to buy the'+
+            ' coolest, latest and exclusive stuff produced by Love Button partners</p>'+
+            '<br/><div style="width:210px;margin:auto;"><a href="/" class="lovebutton"></a></div>'
+            '</section></div>'+
+            '</div>';    
         var dialog =new C.widget.dialog({content:html}); 
         dialog.fireClose(); 
         if(C.utility.getCookie('popuploveme') != undefined){
@@ -76,7 +86,10 @@
             else{
                 $(this).removeClass('lovebutton').addClass('lovebutton2');
                 document.cookie='popuploveme='+$(this).attr('id');
-            } 
+                dialog.showDialog(); 
+                new C.widget.dialog({content:html2}); 
+            }
+            
         });
 
     });
