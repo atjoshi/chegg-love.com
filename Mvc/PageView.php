@@ -189,12 +189,7 @@ HTML;
     {$content}
 </article>
 
-<footer class="footer">
-  <div class="footer-container">
-    <p>&copy; Love.com 2013</p>
-  </div>
-</footer>
-</div>
+   </div>
 HTML;
     }
     
@@ -205,8 +200,23 @@ HTML;
 <!-- NAVBAR ================================================== -->
 <header class="navbar-wrapper">
   <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+  
   <div class="container">
-
+    <div class="row-fluid">
+        <div class="span3"><img src="/s/myaccount/img/logo.png" /></div>
+        <div class="span6"><p class="muted" style="text-align:center;">Love is better than like.</p></div>
+        <div class="span3 clearfix">
+            <div class="row-fluid pull-right">
+              <div class="span3 offset4">
+                    <img src="/s/myaccount/img/natalia.png" />
+              </div>
+              <div class="span5">
+                    <h5>Natalia</h5>
+                    <p class="muted">edit profile</p>
+              </div>
+            </div>
+        </div>
+   </div>
     <div class="navbar navbar-inverse">
       <div class="navbar-inner">
         <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
@@ -215,13 +225,18 @@ HTML;
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="brand" href="/"><img src="/s/_global/img/logo.png" style="width:100px;" /></a>
+        <!-- <a class="brand" href="/"><img src="/s/_global/img/logo.png" style="width:100px;" /></a> -->
         <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
         <div class="nav-collapse collapse">
           <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="sample">Sample</a></li>
+            <li><a href="/">Love</a></li>
+            <li><a href="/charities">charities</a></li>
+            <li><a href="/givers">givers</a></li>
+            <li><a href="/loveshop">love shop</a></li>
+            <li><a href="/about">about</a></li>
+          </ul>
+          <ul class="nav pull-right">
+            <li><a href="/help" >help</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div><!-- /.navbar-inner -->

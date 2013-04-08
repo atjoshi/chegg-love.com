@@ -14,6 +14,7 @@ namespace Lovecom\Page\Myaccount;
 class Controller extends \Lovecom\Mvc\PageController {
      public function getPermissions()
      {
-         return array('user.normal'); 
+         return array();
+         //return array('user.normal'); 
      }
 }

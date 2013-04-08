@@ -1,16 +1,13 @@
-body{
-    background: url(/s/_global/img/b.png);
-}
 .navbar-inverse .navbar-inner {
-  background-color: #eaedf1;
-  background-image: -moz-linear-gradient(top, #eaedf1, #eaedf1);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eaedf1), to(#eaedf1));
-  background-image: -webkit-linear-gradient(top, #eaedf1, #eaedf1);
-  background-image: -o-linear-gradient(top, #eaedf1, #eaedf1);
-  background-image: linear-gradient(to bottom, #eaedf1, #eaedf1);
+  background-color: #ffecf5;
+  background-image: -moz-linear-gradient(top, #ffecf5, #ffecf5);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffecf5), to(#ffecf5));
+  background-image: -webkit-linear-gradient(top, #ffecf5, #ffecf5);
+  background-image: -o-linear-gradient(top, #ffecf5, #ffecf5);
+  background-image: linear-gradient(to bottom, #ffecf5, #ffecf5);
   background-repeat: repeat-x;
-  border-color: #eaedf1;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eaedf1', endColorstr='#eaedf1', GradientType=0);
+  border-color: #ffecf5;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffecf5', endColorstr='#ffecf5', GradientType=0);
 }
 .navbar-inverse .brand, .navbar-inverse .nav > li > a{
      font-weight: bolder;

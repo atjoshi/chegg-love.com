@@ -1,15 +1,47 @@
 body{
-    padding-top:60px;
+    padding-top:140px;
 }
 .navbar-wrapper {
     left: 0;
     margin-bottom: -90px;
-    margin-top: 20px;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 10;
 }
-.marketing{
-    width:800px;
+.nav-header1{
+    font-size: 16px;
+}
+.nav-body{
+    font-size: 15px;
+    color: #666; 
+}
+.v-border{
+    border-left: 1px solid #d6f0f7; 
+}
+.h-border{
+    padding:20px;
+    border-bottom: 1px solid #d6f0f7; 
+}
+.body-txt{
+    font-size: 18px;
+    color: #666; 
+}
+.load-more{
+    color: #666; 
+    border: 1px solid #333; 
+    text-align: center;
+    width: 150px;
+    margin: auto;
+    display: block;
+    padding:5px 0;
+}
+.d-border{
+    padding:20px;
+}
+.d-border p{
+    font-size:15px;
+    padding-bottom: 15px;
+    color:#333;
+    
 }

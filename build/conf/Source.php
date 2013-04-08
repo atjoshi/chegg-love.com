@@ -43,6 +43,13 @@ StaticConfig::$pages = array(
         'js' => array(
         ),
     ),
+    'Lovecom\Page\Myaccount\Detail\View' => array(
+        'css' => array(
+            '/s/myaccount/myaccount.css',
+        ),
+        'js' => array(
+        ),
+    ),
     'Lovecom\Page\Lovebutton\View' => array(
         'css' => array(
             '/s/lovebutton/love.css',
